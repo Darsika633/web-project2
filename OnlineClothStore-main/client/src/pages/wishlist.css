@@ -1,0 +1,42 @@
+.wishlist__title {
+    padding: 0;
+    font: 400 20px / 24px 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+}
+
+.wishlist__meta {
+    font: 500 12px / 20px Raleway, sans-serif;
+    color: #999;
+}
+
+.wishlist__price {
+    padding: 0 0 5px;
+    display: inline-block;
+    vertical-align: top;
+    font: 20px / 20px 'Josefin Sans', sans-serif;
+}
+
+.checkbox__label {
+    padding: 0 0 0 30px;
+    display: block;
+    position: relative;
+    font: 14px / 16px Raleway, sans-serif;
+    color: #444;
+    cursor: pointer;
+}
+
+.wishlist__addcart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: #e94560;
+    font: 500 14px Raleway, sans-serif;
+    cursor: pointer;
+    padding: 0;
+}
+
+.wishlist__card {
+    border-bottom: 1px solid #eee;
+}

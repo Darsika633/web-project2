@@ -1,0 +1,117 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                  TRENDBITE - EMAIL SETUP INSTRUCTIONS                ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+📧 Add these lines to your .env file to enable email notifications:
+
+# ==============================================
+# EMAIL CONFIGURATION - BREVO
+# ==============================================
+EMAIL_SERVICE=brevo
+BREVO_SMTP_USER=98fe1e001@smtp-brevo.com
+BREVO_SMTP_KEY=TWM6CSJpvdnL3zR7
+EMAIL_FROM=noreply@trendbite.com
+EMAIL_FROM_NAME=TrendBite - Your Fashion Destination
+
+# Frontend URL (update with your actual frontend URL)
+FRONTEND_URL=http://localhost:3000
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                          QUICK START GUIDE                           ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+1. Open your .env file
+2. Copy the EMAIL CONFIGURATION section above
+3. Paste it into your .env file
+4. Update EMAIL_FROM with your verified sender email (must be verified in Brevo)
+5. Update FRONTEND_URL with your actual frontend URL
+6. Save the file
+7. Restart your server: npm run dev
+
+✅ DONE! Emails will now be sent automatically when orders are created!
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                        VERIFY SENDER EMAIL                           ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+IMPORTANT: You must verify your sender email in Brevo dashboard!
+
+1. Go to https://app.brevo.com
+2. Navigate to: Settings → Senders & IP
+3. Click "Add a sender"
+4. Add your email (e.g., noreply@trendbite.com or orders@trendbite.com)
+5. Verify via the confirmation link sent to your email
+6. Use this verified email in EMAIL_FROM
+
+Note: You can use any email for testing, but for production, use a 
+professional email from your own domain for better deliverability.
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                            TEST EMAILS                               ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+After configuration, test by:
+
+1. Start server: npm run dev
+
+2. Look for this message in console:
+   ✅ Email service is ready
+
+3. Create a test order through API
+
+4. Check console for:
+   ✅ Email sent successfully: <message-id>
+   ✅ Order confirmation email sent to customer@email.com
+
+5. Check your email inbox (and spam folder)
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                      WHAT EMAILS ARE SENT                            ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+✉️  Order Confirmation (with invoice)
+    - Sent immediately after order creation
+    - Beautiful HTML template with product images
+    - Complete order details and pricing
+
+✉️  Order Status Updates
+    - Order Confirmed ✅
+    - Order Shipped 📦
+    - Out for Delivery 🚚
+    - Order Delivered 🎁
+
+All emails are responsive, professional, and include your branding!
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                         TROUBLESHOOTING                              ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+⚠️  Email service verification failed?
+→ Check SMTP credentials are correct (no extra spaces)
+→ Ensure .env file is in the root directory
+→ Restart your server after adding variables
+
+📬 Emails not received?
+→ Check spam/junk folder
+→ Verify sender email in Brevo dashboard
+→ Check console logs for errors
+→ Verify EMAIL_FROM matches verified sender
+
+🔒 Authentication failed?
+→ Double-check BREVO_SMTP_KEY is correct
+→ Make sure you're using SMTP key, not API key
+→ Generate new SMTP key in Brevo if needed
+
+
+For detailed documentation, see:
+- EMAIL_CONFIGURATION_GUIDE.md
+- BREVO_EMAIL_SETUP.md
+
+═══════════════════════════════════════════════════════════════════════
+
+
